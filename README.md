@@ -62,6 +62,14 @@ Through this project, I practiced:
 * Local Storage
 * Basic frontend project organization
 
+ ## 🌐 Live Demo
+
+[Click here to try the To-Do List](https://Devanshi-Tech3158.github.io/TODO-LIST-HTML-CSS-JS/)
+
+## 📸 Project Preview
+
+![To-Do List Project Preview](TODO-LIST-preview.png)
+
 ## 👩‍💻 Author
 Devanshi
 
