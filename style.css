@@ -1,112 +1,315 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins',sans-serif;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.container{
-    width: 100%;
+body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #153677, #4e085f);
-    padding: 10px;
+    background: #f5f1e8;
+    color: #29332f;
 }
 
-.todo-app{
+.container {
+    min-height: 100vh;
     width: 100%;
-    max-width: 540px;
-    background: #fff;
-    margin: 100px auto 20px;
-    padding: 40px 30px 70px;
-    border-radius: 10px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
 }
 
-.todo-app h2{
-    color: #002765;
+/* Main card */
+
+.todo-app {
+    width: 100%;
+    max-width: 725px;
+    background: #fffdf8;
+    border: 1px solid #ded8ca;
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(50, 55, 45, 0.10);
+}
+
+/* Heading */
+
+.heading {
+    border-bottom: 1px solid #ded8ca;
+    padding-bottom: 27px;
+    margin-bottom: 28px;
+}
+
+.small-title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #8a7250;
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-size: 34px;
+    color: #315c4a;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+h1 span {
+    font-size: 27px;
+    color: #c59b52;
+}
+
+.subtitle {
+    color: #6f756f;
+    font-size: 16px;
+}
+
+/* Input */
+
+.task-input {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    width: 100%;
+    height: 64px;
+    background: #f4f2ec;
+    border: 1px solid #ddd9ce;
+    border-radius: 11px;
+    padding: 5px;
+    margin-bottom: 17px;
 }
 
-.todo-app h2 img{
-    width: 30px;
-    margin-left: 10px;
-}
-
-.row{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #edeef0;
-    border-radius: 30px;
-    padding-left: 20px;
-    margin-bottom: 25px;
-}
-
-input{
+.task-input input {
     flex: 1;
+    min-width: 0;
+    height: 100%;
     border: none;
     outline: none;
     background: transparent;
-    padding: 10px;
+    padding: 0 15px;
+    font-size: 16px;
+    color: #29332f;
 }
 
-button{
+.task-input input::placeholder {
+    color: #929791;
+}
+
+.task-input button {
+    height: 46px;
     border: none;
-    outline: none;
-    padding: 16px 50px;
-    background: #ff5945;
-    color: #fff;
+    background: #315c4a;
+    color: white;
+    padding: 0 25px;
+    border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 40px;
 }
 
-ul li{
+.task-input button:hover {
+    background: #264b3c;
+}
+
+/* Task information */
+
+.task-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6px 20px;
+    border-bottom: 1px solid #ded8ca;
+    font-size: 13px;
+    color: #858983;
+}
+
+#task-count {
+    color: #315c4a;
+    font-weight: bold;
+}
+
+/* Task list */
+
+ul {
     list-style: none;
-    font-size: 17px;
-    padding: 12px 8px 12px 50px;
-    user-select: none;
-    cursor: pointer;
+    margin-top: 3px;
+}
+
+ul li {
     position: relative;
+    padding: 15px 45px 15px 42px;
+    border-bottom: 1px solid #ebe7dc;
+    font-size: 15px;
+    line-height: 1.4;
+    cursor: pointer;
+    word-break: break-word;
 }
 
-ul li::before{
-    content: '';
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li:hover {
+    background: #faf8f2;
+}
+
+/* Circle */
+
+ul li::before {
+    content: "";
     position: absolute;
-    height: 28px;
-    width: 28px;
+    left: 6px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #9b9d97;
     border-radius: 50%;
-    background-image: url(images/unchecked.png);
-    background-size: cover;
-    background-position: center;
-    top: 12px;
-    left: 8px;
+    background: #fffdf8;
 }
 
-ul li.checked{
-    color: #555;
+/* Completed */
+
+ul li.checked {
+    color: #999b96;
     text-decoration: line-through;
 }
 
-ul li.checked::before{
-    background-image: url(images/checked.png);
+ul li.checked::before {
+    content: "✓";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #315c4a;
+    border-color: #315c4a;
+    color: white;
+    font-size: 12px;
 }
 
-ul li span{
+/* Delete button */
+
+ul li span {
     position: absolute;
-    right: 0;
-    top: 5px;
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-    color: #555;
-    line-height: 40px;
-    text-align: center;
+    right: 3px;
+    top: 8px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
+    color: #8d8f8a;
+    font-size: 21px;
+    cursor: pointer;
 }
 
-ul li span:hover{
-    background: #edeef0;
+ul li span:hover {
+    background: #eeeae0;
+    color: #9b5d4d;
+}
+
+/* Footer */
+
+.footer {
+    border-top: none;
+    margin-top: 28px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 13px;
+    color: #929791;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 700px) {
+
+    .container {
+        padding: 25px 15px;
+    }
+
+    .todo-app {
+        max-width: 620px;
+        padding: 32px;
+    }
+
+}
+
+/* Mobile */
+
+@media screen and (max-width: 480px) {
+
+    .container {
+        padding: 15px 10px;
+        align-items: flex-start;
+    }
+
+    .todo-app {
+        margin-top: 15px;
+        padding: 27px 18px;
+        border-radius: 14px;
+    }
+
+    .heading {
+        padding-bottom: 22px;
+        margin-bottom: 23px;
+    }
+
+    .small-title {
+        font-size: 10px;
+        letter-spacing: 1.7px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h1 span {
+        font-size: 23px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .task-input {
+        height: 58px;
+    }
+
+    .task-input input {
+        font-size: 14px;
+        padding: 0 9px;
+    }
+
+    .task-input button {
+        height: 44px;
+        padding: 0 18px;
+        font-size: 14px;
+    }
+
+    .task-info {
+        font-size: 11px;
+        padding-bottom: 17px;
+    }
+
+    ul li {
+        font-size: 14px;
+        padding-left: 38px;
+        padding-right: 40px;
+    }
+
+    ul li::before {
+        left: 4px;
+        top: 15px;
+        width: 19px;
+        height: 19px;
+    }
+
+    .footer {
+        margin-top: 24px;
+    }
+
+    .footer p {
+        font-size: 11px;
+    }
 }
