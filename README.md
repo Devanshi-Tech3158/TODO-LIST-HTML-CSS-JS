@@ -47,10 +47,6 @@ todo-list-html-css-js/
 2. Open the project folder.
 3. Open `index.html` in a web browser.
 
-## 📸 Project Preview
-
-Add screenshots of your application here.
-
 ## 🎯 Learning Outcomes
 
 Through this project, I practiced:
