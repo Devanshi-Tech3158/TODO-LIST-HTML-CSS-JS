@@ -3,35 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML,CSS,JS PROJECT  To-Do List</title>
+    <title>My To-Do List</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <div class="todo-app">
-            <h2>To-Do List <img src="images/icon.png" ></h2>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Add your text">
-                <button onclick="addTask()">Add</button>
 
-                
+<body>
+
+    <div class="container">
+
+        <div class="todo-app">
+
+            <div class="heading">
+                <div>
+                    <p class="small-title">MY DAILY PLANNER</p>
+                    <h1>My Tasks <span>✓</span></h1>
+                    <p class="subtitle">Stay organized. Get things done.</p>
+                </div>
             </div>
-            <ul id="list-container">
-                    <!-- <li class="checked">Task 1</li>
-                    <li>Task 2</li>
-                    <li>Task 3</li> -->
-                </ul>
+
+            <div class="task-input">
+                <input type="text" id="input-box" placeholder="What needs to be done?">
+                <button onclick="addTask()">Add</button>
+            </div>
+
+            <div class="task-info">
+                <p id="task-count">0 tasks</p>
+                <p>Click a task to complete it</p>
+            </div>
+
+            <ul id="list-container"></ul>
+
+            
+
         </div>
+
     </div>
 
-
-
-
-
-
-
-
     <script src="script.js"></script>
-    
 </body>
 </html>
