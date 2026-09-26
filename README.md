@@ -68,7 +68,7 @@ Through this project, I practiced:
 
 ## 📸 Project Preview
 
-![To-Do List Project Preview](TODO-LIST-preview.png)
+![To-Do List Project Preview](TODO-List-Preview.png)
 
 ## 👩‍💻 Author
 Devanshi
